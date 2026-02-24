@@ -35,27 +35,38 @@ class VehicleSelectScreen extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 30),
-            VehicleCard(
-              title: 'Bike License',
-              subtitle: 'Motorcycle Category',
-              icon: Icons.two_wheeler,
-              color: Colors.orange,
-              onTap: () {},
-            ),
-            const SizedBox(height: 20),
-            VehicleCard(
-              title: 'Car License',
-              subtitle: 'Light Vehicle Category',
-              icon: Icons.directions_car,
-              color: Colors.blue,
-              onTap: () {},
-            ),
-          ],
-        ),
+              VehicleCard(
+  title: 'Bike License',
+  subtitle: 'Motorcycle Category',
+  icon: Icons.two_wheeler,
+  color: Colors.orange,
+  onTap: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const BikeScreen(),
       ),
     );
-  }
-}
+  },
+),
+
+},
+           const SizedBox(height: 20),
+
+VehicleCard(
+  title: 'Car License',
+  subtitle: 'Light Vehicle Category',
+  icon: Icons.directions_car,
+  color: Colors.blue,
+  onTap: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const CarScreen(),
+      ),
+    );
+  },
+ ),
 
 class VehicleCard extends StatelessWidget {
   final String title;
