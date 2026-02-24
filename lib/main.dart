@@ -95,3 +95,35 @@ class VehicleCard extends StatelessWidget {
           color: color.withOpacity(0.1),
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color:
+class BikeScreen extends StatelessWidget {
+  const BikeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Bike License'),
+      ),
+      body: const Center(
+        child: Text('Bike License Questions Here'),
+      ),
+    );
+  }
+}
+
+class CarScreen extends StatelessWidget {
+  const CarScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Car License'),
+      ),
+      body: const Center(
+        child: Text('Car License Questions Here'),
+      ),
+    );
+  }
+}
+Add Bike and Car screens
