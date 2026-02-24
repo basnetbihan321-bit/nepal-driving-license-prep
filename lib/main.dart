@@ -12,26 +12,75 @@ class LicensePrepApp extends StatelessWidget {
     return MaterialApp(
       title: 'Nepal License Prep',
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      home: const VehicleSelectScreen(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class VehicleSelectScreen extends StatelessWidget {
+  const VehicleSelectScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('नेपाल लाइसेन्स तयारी'),
+        title: const Text('सवारी छनोट गर्नुहोस्'),
+        centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'Welcome 🚗🏍️',
-          style: TextStyle(fontSize: 24),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            const SizedBox(height: 30),
+            VehicleCard(
+              title: 'Bike License',
+              subtitle: 'Motorcycle Category',
+              icon: Icons.two_wheeler,
+              color: Colors.orange,
+              onTap: () {},
+            ),
+            const SizedBox(height: 20),
+            VehicleCard(
+              title: 'Car License',
+              subtitle: 'Light Vehicle Category',
+              icon: Icons.directions_car,
+              color: Colors.blue,
+              onTap: () {},
+            ),
+          ],
         ),
       ),
     );
   }
 }
+
+class VehicleCard extends StatelessWidget {
+  final String title;
+  final String subtitle;
+  final IconData icon;
+  final Color color;
+  final VoidCallback onTap;
+
+  const VehicleCard({
+    super.key,
+    required this.title,
+    required this.subtitle,
+    required this.icon,
+    required this.color,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(20),
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: color.withOpacity(0.1),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color:
