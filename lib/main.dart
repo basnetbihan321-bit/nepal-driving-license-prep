@@ -120,10 +120,29 @@ class CarScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Car License'),
       ),
-      body: const Center(
-        child: Text('Car License Questions Here'),
+      body: ListView(
+  padding: const EdgeInsets.all(16),
+  children: const [
+    Card(
+      child: ListTile(
+        title: Text('सडक चिन्हमा रातो बत्तीको अर्थ के हो?'),
+        subtitle: Text('What does red traffic light mean?'),
       ),
-    );
-  }
-}
-Add Bike and Car screens
+    ),
+    SizedBox(height: 10),
+    Card(
+      child: ListTile(
+        title: Text('ओभरटेक गर्दा कुन साइडबाट जानुपर्छ?'),
+        subtitle: Text('From which side should you overtake?'),
+      ),
+    ),
+SizedBox(height: 10),
+Card(
+  child: ListTile(
+    title: Text('हेल्मेट किन आवश्यक छ?'),
+    subtitle: Text('Why is helmet necessary?'),
+  ),
+),
+],
+),
+);
