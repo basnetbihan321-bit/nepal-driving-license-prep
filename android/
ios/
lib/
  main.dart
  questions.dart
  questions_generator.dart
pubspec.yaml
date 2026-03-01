@@ -1,0 +1,7 @@
+android/
+ios/
+lib/
+  main.dart
+  questions.dart
+  questions_generator.dart
+pubspec.yaml
