@@ -1,11 +1,27 @@
-# Nepal Driving License Prep
+# 🚗 Nepal Driving License Prep
 
-This project helps learners in Nepal prepare for the driving license written exam.
+A Flutter mobile app to help learners in Nepal prepare for the driving license written exam.
 
-## Features
-- Practice questions
-- Mock tests
-- Traffic rules guide
+## 📱 Features
+- Practice multiple-choice questions
+- Random question generator
+- Exam-like quiz mode
+- Nepal traffic rules preparation
 
-## Author
-Bidhan Basnet
+## 🛠️ Built With
+- Flutter (Dart)
+- Material UI
+
+## 📂 Project Structure
+- `main.dart` — app entry point  
+- `questions.dart` — question data  
+- `questions_generator.dart` — quiz logic  
+
+## 🎯 Purpose
+This app is designed to make driving license exam preparation easier for Nepali learners by providing practice questions and quiz simulation.
+
+## 👨‍💻 Author
+**Bidhan Basnet**
+
+## 📄 License
+This project is open-source and free to use.
